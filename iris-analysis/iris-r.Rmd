@@ -19,3 +19,17 @@ The Iris Data Set was downloaded from the UCI Machine Learning Repository.
     - Iris Setosa 
     - Iris Versicolour 
     - Iris Virginica
+    
+# Load Data
+
+```{r}
+dat <- read.csv(file = "../data/iris-data/iris.data")
+
+# name columns based on attributes above
+names(dat) <- c(
+    "sepal.length", "sepal.width", 
+    "petal.length", "petal.width", 
+    "class")
+
+head(dat)
+```
