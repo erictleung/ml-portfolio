@@ -85,6 +85,11 @@ img {
 </ul></li>
 </ol>
 </div>
+<div id="load-packages" class="section level1">
+<h1>Load Packages</h1>
+<pre class="r"><code>library(ggplot2)
+library(magrittr)</code></pre>
+</div>
 <div id="load-data" class="section level1">
 <h1>Load Data</h1>
 <pre class="r"><code>dat &lt;- read.csv(file = &quot;../data/iris-data/iris.data&quot;)
@@ -103,6 +108,19 @@ head(dat)</code></pre>
 ## 4          5.0         3.6          1.4         0.2 Iris-setosa
 ## 5          5.4         3.9          1.7         0.4 Iris-setosa
 ## 6          4.6         3.4          1.4         0.3 Iris-setosa</code></pre>
+</div>
+<div id="explore-data" class="section level1">
+<h1>Explore Data</h1>
+<pre class="r"><code>str(dat)</code></pre>
+<pre><code>## 'data.frame':    149 obs. of  5 variables:
+##  $ sepal.length: num  4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 5.4 ...
+##  $ sepal.width : num  3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 ...
+##  $ petal.length: num  1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 ...
+##  $ petal.width : num  0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 ...
+##  $ class       : Factor w/ 3 levels &quot;Iris-setosa&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div id="explore-sepal-properties" class="section level2">
+<h2>Explore Sepal Properties</h2>
+</div>
 </div>
 
 

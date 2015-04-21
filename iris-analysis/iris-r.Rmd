@@ -20,6 +20,14 @@ The Iris Data Set was downloaded from the UCI Machine Learning Repository.
     - Iris Versicolour 
     - Iris Virginica
     
+# Load Packages
+
+```{r}
+library(ggplot2)
+library(magrittr)
+```
+
+    
 # Load Data
 
 ```{r}
@@ -33,3 +41,16 @@ names(dat) <- c(
 
 head(dat)
 ```
+
+# Explore Data
+
+```{r}
+str(dat)
+```
+
+## Explore Sepal Properties
+
+```{r}
+
+```
+
