@@ -19,7 +19,7 @@ The Iris Data Set was downloaded from the UCI Machine Learning Repository.
     - Iris Setosa 
     - Iris Versicolour 
     - Iris Virginica
-    
+
 # Load Packages
 
 ```{r}
@@ -51,6 +51,6 @@ str(dat)
 ## Explore Sepal Properties
 
 ```{r}
-
+qplot(x = dat$sepal.length, main = "Sepal Length Distribution")
 ```
 
