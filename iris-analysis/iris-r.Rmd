@@ -20,6 +20,10 @@ The Iris Data Set was downloaded from the UCI Machine Learning Repository.
     - Iris Versicolour 
     - Iris Virginica
 
+# Goal
+
+The iris data set contains four potential predictive values: sepal length, sepal width, petal length, and petal width. One or more combinations of these attributes may be used to predict the iris class, which can be one of three classes: Setosa, Versicolour, or virginica.
+
 # Load Packages
 
 ```{r}
