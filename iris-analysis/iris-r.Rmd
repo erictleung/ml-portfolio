@@ -1,0 +1,8 @@
+---
+title: "Iris Machine Learning"
+author: "Eric Leung"
+date: "April 21, 2015"
+output: html_document
+---
+
+# Introduction
