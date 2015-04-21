@@ -5,4 +5,4 @@ the University of California, Irvine (UCI) machine learning repository
 
 ## List of data sets analyzed
 
-+ Iris Data Set http://archive.ics.uci.edu/ml/datasets/Iris
++ Iris Data Set (http://archive.ics.uci.edu/ml/datasets/Iris)
