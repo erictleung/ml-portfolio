@@ -10,7 +10,6 @@
 
 <meta name="author" content="Eric Leung" />
 
-<meta name="date" content="2015-04-21" />
 
 <title>Iris Data Set</title>
 
@@ -64,14 +63,16 @@ img {
 <div id="header">
 <h1 class="title">Iris Data Set</h1>
 <h4 class="author"><em>Eric Leung</em></h4>
-<h4 class="date"><em>April 21, 2015</em></h4>
+<h4 class="date"><em>July 28th, 2015</em></h4>
 </div>
 
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>The Iris Data Set was downloaded from the UCI Machine Learning Repository.</p>
+<p>The Iris Data Set was downloaded from the <a href="http://archive.ics.uci.edu/ml/datasets/Iris">UCI Machine Learning Repository</a>.</p>
 <p>“This is perhaps the best known database to be found in the pattern recognition literature. Fisher’s paper is a classic in the field and is referenced frequently to this day. (See Duda &amp; Hart, for example.) The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.”</p>
+<div id="attribute-information" class="section level2">
+<h2>Attribute Information</h2>
 <ol style="list-style-type: decimal">
 <li>sepal length in cm</li>
 <li>sepal width in cm</li>
@@ -85,18 +86,21 @@ img {
 </ul></li>
 </ol>
 </div>
+</div>
 <div id="goal" class="section level1">
 <h1>Goal</h1>
 <p>The iris data set contains four potential predictive values: sepal length, sepal width, petal length, and petal width. One or more combinations of these attributes may be used to predict the iris class, which can be one of three classes: Setosa, Versicolour, or virginica.</p>
 </div>
 <div id="load-packages" class="section level1">
 <h1>Load Packages</h1>
-<pre class="r"><code>library(ggplot2)
-library(magrittr)</code></pre>
+<pre class="r"><code>require(ggplot2)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre class="r"><code>require(magrittr)</code></pre>
+<pre><code>## Loading required package: magrittr</code></pre>
 </div>
 <div id="load-data" class="section level1">
 <h1>Load Data</h1>
-<pre class="r"><code>dat &lt;- read.csv(file = &quot;../data/iris-data/iris.data&quot;)
+<pre class="r"><code>dat &lt;- read.csv(file = &quot;../data/iris.data&quot;)
 
 # name columns based on attributes above
 names(dat) &lt;- c(
