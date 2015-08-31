@@ -57,6 +57,18 @@ str(dat)
 ## Explore Sepal Properties
 
 ```{r}
-qplot(x = dat$sepal.length, main = "Sepal Length Distribution")
+qplot(x = dat$sepal.length, 
+      main = "Sepal Length Distribution")
+qplot(x = dat$sepal.width, 
+      main = "Sepal Width Distribution")
+```
+
+## Explore Petal Properties
+
+```{r}
+qplot(x = dat$petal.length, 
+      main = "Petal Length Distribution")
+qplot(x = dat$petal.width, 
+      main = "Petal Width Distribution")
 ```
 
