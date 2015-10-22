@@ -26,11 +26,15 @@ The Iris Data Set was downloaded from the [UCI Machine Learning Repository](http
 
 The iris data set contains four potential predictive values: sepal length, sepal width, petal length, and petal width. One or more combinations of these attributes may be used to predict the iris class, which can be one of three classes: Setosa, Versicolour, or virginica.
 
+Before we can predict on the data, we will perform an exploratory data analysis to understand nuances in the data.
+
 # Load Packages
 
 ```{r}
 require(ggplot2)
+require(dplyr)
 require(magrittr)
+require(GGally)
 ```
 
     
@@ -45,13 +49,15 @@ names(dat) <- c(
     "petal.length", "petal.width", 
     "class")
 
-head(dat)
+dat <- tbl_df(dat)
+dat
 ```
 
 # Explore Data
 
 ```{r}
 str(dat)
+ggpairs(dat)
 ```
 
 ## Explore Sepal Properties
