@@ -9,24 +9,33 @@ output: html_document
 
 The Iris Data Set was downloaded from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Iris).
 
-"This is perhaps the best known database to be found in the pattern recognition literature. Fisher's paper is a classic in the field and is referenced frequently to this day. (See Duda & Hart, for example.) The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other."
+"This is perhaps the best known database to be found in the pattern recognition
+literature. Fisher's paper is a classic in the field and is referenced
+frequently to this day. (See Duda & Hart, for example.) The data set contains 3
+classes of 50 instances each, where each class refers to a type of iris plant.
+One class is linearly separable from the other 2; the latter are NOT linearly
+separable from each other."
 
 ## Attribute Information
 
-1. sepal length in cm 
-2. sepal width in cm 
-3. petal length in cm 
-4. petal width in cm 
-5. class: 
-    - Iris Setosa 
-    - Iris Versicolour 
+1. sepal length in cm
+2. sepal width in cm
+3. petal length in cm
+4. petal width in cm
+5. class:
+    - Iris Setosa
+    - Iris Versicolour
     - Iris Virginica
 
 # Goal
 
-The iris data set contains four potential predictive values: sepal length, sepal width, petal length, and petal width. One or more combinations of these attributes may be used to predict the iris class, which can be one of three classes: Setosa, Versicolour, or virginica.
+The iris data set contains four potential predictive values: sepal length, sepal
+width, petal length, and petal width. One or more combinations of these
+attributes may be used to predict the iris class, which can be one of three
+classes: Setosa, Versicolour, or virginica.
 
-Before we can predict on the data, we will perform an exploratory data analysis to understand nuances in the data.
+Before we can predict on the data, we will perform an exploratory data analysis
+to understand nuances in the data.
 
 # Load Packages
 
@@ -45,8 +54,8 @@ dat <- read.csv(file = "../data/iris.data")
 
 # name columns based on attributes above
 names(dat) <- c(
-    "sepal.length", "sepal.width", 
-    "petal.length", "petal.width", 
+    "sepal.length", "sepal.width",
+    "petal.length", "petal.width",
     "class")
 
 dat <- tbl_df(dat)
@@ -63,18 +72,17 @@ ggpairs(dat)
 ## Explore Sepal Properties
 
 ```{r}
-qplot(x = dat$sepal.length, 
+qplot(x = dat$sepal.length,
       main = "Sepal Length Distribution")
-qplot(x = dat$sepal.width, 
+qplot(x = dat$sepal.width,
       main = "Sepal Width Distribution")
 ```
 
 ## Explore Petal Properties
 
 ```{r}
-qplot(x = dat$petal.length, 
+qplot(x = dat$petal.length,
       main = "Petal Length Distribution")
-qplot(x = dat$petal.width, 
+qplot(x = dat$petal.width,
       main = "Petal Width Distribution")
 ```
-
