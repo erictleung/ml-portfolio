@@ -42,11 +42,9 @@ to understand nuances in the data.
 ```{r}
 require(ggplot2)
 require(dplyr)
-require(magrittr)
 require(GGally)
 ```
 
-    
 # Load Data
 
 ```{r}
@@ -65,8 +63,10 @@ dat
 # Explore Data
 
 ```{r}
-str(dat)
-ggpairs(dat)
+str(dat) # take a look at data and kinds of data
+summary(dat) # look at some summary statistics of data
+dat %>% apply(MARGIN = 2, FUN = sd) # look at standard deviation of data
+ggpairs(dat) # look at all pairwise plots of variables
 ```
 
 ## Explore Sepal Properties
