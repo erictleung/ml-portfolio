@@ -64,10 +64,39 @@ dat
 
 ```{r}
 str(dat) # take a look at data and kinds of data
+```
+
+There appears to be `r dat %>% nrow()` samples with `r dat %>% ncol()` different
+variables. Four out of the five appear have numerical data types while the last
+variable is a factor variable. This factor variable is what we will predict on,
+which is the class of the flower.
+
+```{r}
 summary(dat) # look at some summary statistics of data
 dat %>% apply(MARGIN = 2, FUN = sd) # look at standard deviation of data
+dat %>% apply(MARGIN = 2, FUN = range) # look at range of values vars can take
+```
+
+These summary statistics give us a brief overview of how the data looks like.
+Each of the different variables do not appear to vary much in range. Petal
+length appears to have the greatest standard deviation and widest range.
+Additionally, each class of iris are almost equal in frequency. It is also worth
+noting there doesn't appear to be any missing values in terms of class.
+
+```{r}
 ggpairs(dat) # look at all pairwise plots of variables
 ```
+
+Here we can look at big picture trends. From here, we might be able to make the
+following claims:
+
+- Sepal length appears to be a good distinguisher among the three iris classes
+as their box plots do not overlap very much, if any. However, looking at a
+different view of the boxplots in terms of histograms, we can see the amount of
+overlap among the flowers.
+- Petal length and petal width are another variable that might be helpful in
+distinguishing among the different classes. Both of their histograms show that
+one class of iris, setosa, can be uniquely identified using these two variables.
 
 ## Explore Sepal Properties
 
