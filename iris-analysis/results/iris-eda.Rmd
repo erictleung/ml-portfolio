@@ -73,8 +73,10 @@ which is the class of the flower.
 
 ```{r}
 summary(dat) # look at some summary statistics of data
-dat %>% apply(MARGIN = 2, FUN = sd) # look at standard deviation of data
-dat %>% apply(MARGIN = 2, FUN = range) # look at range of values vars can take
+dat %>% select(-contains("class")) %>%
+    apply(MARGIN = 2, FUN = sd) # look at standard deviation of data
+dat %>% select(-contains("class")) %>%
+    apply(MARGIN = 2, FUN = range) # look at range of values vars can take
 ```
 
 These summary statistics give us a brief overview of how the data looks like.
